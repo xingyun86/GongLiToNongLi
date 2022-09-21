@@ -105,6 +105,9 @@
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>$(ProjectDir)$(ProjectName).def</ModuleDefinitionFile>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY $(OutDir)$(TargetName)$(TargetExt)  $(OutDir)$(TargetName)32$(TargetExt) /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -127,6 +130,9 @@
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>$(ProjectDir)$(ProjectName).def</ModuleDefinitionFile>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY $(OutDir)$(TargetName)$(TargetExt)  $(OutDir)$(TargetName)32$(TargetExt) /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -145,6 +151,9 @@
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>$(ProjectDir)$(ProjectName).def</ModuleDefinitionFile>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY $(OutDir)$(TargetName)$(TargetExt)  $(OutDir)$(TargetName)64$(TargetExt) /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -167,6 +176,9 @@
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>$(ProjectDir)$(ProjectName).def</ModuleDefinitionFile>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY $(OutDir)$(TargetName)$(TargetExt)  $(OutDir)$(TargetName)64$(TargetExt) /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
